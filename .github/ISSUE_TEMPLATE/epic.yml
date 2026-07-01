@@ -1,0 +1,113 @@
+name: ODTS Epic
+description: Create a new ODTS Epic
+title: "[Epic] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # ODTS Epic
+
+        Use this form to create an ODTS Epic.
+
+        Epics describe foundational workflows, architectural goals, requirements, and long-term implementation directions.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Epic Types
+
+        ### UserStory
+        Use **UserStory** for workflow-oriented, user-oriented, or process-oriented goals.
+
+        UserStories describe how Origin Developers or User Developers want to work with ODTS.
+
+        ### Requirement
+        Use **Requirement** for external technical constraints, system requirements, or implementation prerequisites.
+
+        Requirements describe conditions that exist independently from ODTS workflows.
+
+  - type: dropdown
+    id: epic_type
+    attributes:
+      label: Epic Type
+      description: Select the ODTS Epic Type
+      options:
+        - UserStory
+        - Requirement
+    validations:
+      required: true
+
+  - type: input
+    id: related_epics
+    attributes:
+      label: Related Epics
+      description: Optional related Epic references
+      placeholder: "Epic #..., Epic #..."
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short summary of the Epic
+      placeholder: Describe the Epic briefly
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Describe what this Epic applies to
+      placeholder: |
+        This applies especially to:
+        - ...
+        - ...
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: Explain why this Epic exists
+      placeholder: Describe the purpose of this Epic
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_bootstrap_evolution
+    attributes:
+      label: Expected Bootstrap Evolution
+      description: Describe how this Epic may evolve during the bootstrap process
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+
+  - type: textarea
+    id: bootstrap_limitations
+    attributes:
+      label: Bootstrap Limitations
+      description: Describe temporary bootstrap limitations if relevant
+      placeholder: Describe temporary bootstrap limitations
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story
+      description: Describe the workflow or developer perspective behind this Epic
+      placeholder: |
+        As an Origin Developer,
+        I want ...
+        so that ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Optional additional notes
+      placeholder: Additional notes
+      

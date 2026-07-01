@@ -1,0 +1,7 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: ODTS Bootstrap Documentation
+    url: https://github.com/...
+    about: Read the ODTS bootstrap and workflow documentation.
+    

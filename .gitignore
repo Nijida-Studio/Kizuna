@@ -102,3 +102,20 @@ coverage/
 ###############################################################################
 
 .cache/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Xcode
+DerivedData/
+build/
+Build/
+
+# User-specific Xcode data
+**/xcuserdata/
+*.xcuserstate
+*.xcbkptlist
+
+# macOS
+.DS_Store

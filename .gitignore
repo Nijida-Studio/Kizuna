@@ -116,6 +116,7 @@ Build/
 **/xcuserdata/
 *.xcuserstate
 *.xcbkptlist
+**/mock-data/
 
 # macOS
 .DS_Store

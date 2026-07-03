@@ -52,3 +52,27 @@ Keep GitHub API access isolated from CLI parsing.
 Some developers may keep private notes outside the repository, for example in iCloud Drive.
 
 These notes are optional and intentionally not version controlled.
+
+## AMTS
+
+This project uses AMTS 0.1.0.
+
+AMTS location on the local developer machine:
+
+~/Library/Mobile Documents/com~apple~CloudDocs/AI/AMTS
+
+Project AMTS workspace:
+
+~/Library/Mobile Documents/com~apple~CloudDocs/AI/Projects/Kizuna
+
+When available, Akari should read:
+
+- AMTS/startup.md
+- AMTS/assistant-workflow.md
+- AMTS/directory-layout.md
+- Projects/Kizuna/handover.md
+- Projects/Kizuna/current-work.md
+- Projects/Kizuna/decisions.md
+
+Repository documentation remains the public source of truth.
+AMTS files provide private/local project memory.

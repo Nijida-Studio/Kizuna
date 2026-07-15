@@ -1,0 +1,25 @@
+title: Kizuna
+description: Open-source software connecting GitHub issue work with personal productivity workflows.
+lang: de
+url: https://kizuna.nijida.de
+baseurl: ""
+project_id: kizuna
+
+owner:
+  name: Nijida Studio
+
+languages:
+  - code: de
+    label: DE
+  - code: en
+    label: EN
+  - code: ja
+    label: 日本語
+
+remote_theme: Nijida-Studio/nijida-theme@themetest
+
+plugins:
+  - jekyll-remote-theme
+
+exclude:
+  - README.md

@@ -28,6 +28,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Sync shared navigation from themetest
+        run: |
+          mkdir -p _data
+          curl --fail --silent --show-error --location \
+            https://raw.githubusercontent.com/Nijida-Studio/nijida-theme/themetest/_data/navigation.yml \
+            --output _data/navigation.yml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

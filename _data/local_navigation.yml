@@ -1,0 +1,57 @@
+de:
+  navigation_label: Kizuna-Navigation
+  project_label: Software
+  title: Kizuna
+  open_label: Kizuna-Menü öffnen
+  back_label: Alle Nijida-Seiten
+  menu:
+    - id: overview
+      title: Überblick
+      description: Zweck und Einordnung
+      url: /de/
+    - id: status
+      title: Entwicklungsstand
+      description: Mock 3 und nächste Schritte
+      url: /de/status/
+    - id: principles
+      title: Arbeitsprinzipien
+      description: Inkrementelle, offene Entwicklung
+      url: /de/prinzipien/
+en:
+  navigation_label: Kizuna navigation
+  project_label: Software
+  title: Kizuna
+  open_label: Open the Kizuna menu
+  back_label: All Nijida pages
+  menu:
+    - id: overview
+      title: Overview
+      description: Purpose and context
+      url: /en/
+    - id: status
+      title: Development status
+      description: Mock 3 and next steps
+      url: /en/status/
+    - id: principles
+      title: Working principles
+      description: Incremental, open development
+      url: /en/principles/
+ja:
+  navigation_label: Kizunaナビゲーション
+  project_label: ソフトウェア
+  title: Kizuna
+  open_label: Kizunaメニューを開く
+  back_label: Nijida全体メニュー
+  menu:
+    - id: overview
+      title: 概要
+      description: 目的と位置付け
+      url: /ja/
+    - id: status
+      title: 開発状況
+      description: Mock 3と次の作業
+      url: /ja/status/
+    - id: principles
+      title: 開発方針
+      description: 段階的でオープンな開発
+      url: /ja/principles/

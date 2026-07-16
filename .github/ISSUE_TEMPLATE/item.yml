@@ -1,145 +1,30 @@
 name: ODTS Item
-description: Create a new ODTS Item
-title: "[Item] "
+description: Create a coherent implementation area below an Epic
+type: ODTS ITEM
 body:
   - type: markdown
     attributes:
       value: |
-        # ODTS Item
-
-        Use this form to create an ODTS Item.
-
-        Items represent concrete implementation areas below Epics and above Tasks.
-
-  - type: markdown
-    attributes:
-      value: |
-        ## Item Types
-
-        ### Feature
-        Use **Feature** for planned functionality or implementation areas.
-
-        ### FeatureRequest
-        Use **FeatureRequest** for requested extensions or improvements.
-
-        ### Bug
-        Use **Bug** for incorrect behavior that must be fixed.
-
-        ### Documentation
-        Use **Documentation** for documentation-related implementation work.
-
-        ### Test
-        Use **Test** for test-related implementation work.
-
-  - type: dropdown
-    id: item_type
-    attributes:
-      label: Item Type
-      description: Select the ODTS Item Type
-      options:
-        - Feature
-        - FeatureRequest
-        - Bug
-        - Documentation
-        - Test
-    validations:
-      required: true
-
-  - type: input
-    id: parent_epic
-    attributes:
-      label: Parent Epic
-      description: Enter the Parent Epic reference
-      placeholder: "Epic #..."
-    validations:
-      required: true
-
-  - type: input
-    id: domain
-    attributes:
-      label: Domain
-      description: Enter the Domain for this Item
-      placeholder: "Architecture"
-    validations:
-      required: true
-
-  - type: input
-    id: related_epics
-    attributes:
-      label: Related Epics
-      description: Optional related Epic references
-      placeholder: "Epic #..., Epic #..."
-
-  - type: input
-    id: related_items
-    attributes:
-      label: Related Items
-      description: Optional related Item references
-      placeholder: "Item #..., Item #..."
-
-  - type: input
-    id: milestone_override
-    attributes:
-      label: Milestone Override
-      description: Optional Milestone if this Item belongs to a different organizational milestone than its Parent Epic
-      placeholder: "Milestone ..."
+        Set **ODTS Item Subtype** using GitHub's native issue fields. Set optional team planning fields when your team uses them. Attach the new Item to exactly one Parent Epic.
 
   - type: textarea
-    id: summary
+    id: outcome
     attributes:
-      label: Summary
-      description: Short summary of the Item
-      placeholder: Describe the Item briefly
+      label: Intended outcome
+      description: What coherent result should this Item deliver?
     validations:
       required: true
 
   - type: textarea
-    id: user_need
+    id: acceptance
     attributes:
-      label: User Need
-      description: Describe what the user wants or needs from this Item
-      placeholder: |
-        As an Origin Developer,
-        I want ...
-        so that ...
+      label: Acceptance criteria
+      description: What must be true for this Item to be complete?
     validations:
       required: true
 
   - type: textarea
-    id: scope
+    id: context
     attributes:
-      label: Scope
-      description: Describe what this Item applies to
-      placeholder: |
-        This applies especially to:
-        - ...
-        - ...
-        - ...
-    validations:
-      required: true
-
-  - type: textarea
-    id: purpose
-    attributes:
-      label: Purpose
-      description: Explain why this Item exists
-      placeholder: Describe the purpose of this Item
-    validations:
-      required: true
-
-  - type: textarea
-    id: expected_result
-    attributes:
-      label: Expected Result
-      description: Describe the expected outcome
-      placeholder: Describe the expected result
-    validations:
-      required: true
-
-  - type: textarea
-    id: notes
-    attributes:
-      label: Notes
-      description: Optional additional notes
-      placeholder: Additional notes
-      
+      label: Context
+      description: Optional constraints, related issues, or background.

@@ -1,137 +1,32 @@
 name: ODTS Task
-description: Create a new ODTS Task
-title: "[Task] "
+description: Create an actionable unit of work below an Item
+type: ODTS TASK
 body:
   - type: markdown
     attributes:
       value: |
-        # ODTS Task
-
-        Use this form to create an ODTS Task.
-
-        Tasks represent concrete implementation work inside ODTS.
-
-  - type: markdown
-    attributes:
-      value: |
-        ## Task Types
-
-        ### Work
-        Use **Work** for concrete implementation work that is actively being developed.
-
-        Examples:
-        - creating templates
-        - implementing workflows
-        - adding project structures
-        - writing tests
-        - implementing automation
-        - refactoring code
-        - updating documentation structures
-
-        ### ToDo
-        Use **ToDo** for deferred, postponed, or intentionally incomplete work.
-
-        ToDos are typically used:
-        - for known future improvements
-        - for technical debt
-        - for deferred cleanup
-        - for temporarily skipped work
-        - for implementation reminders
-        - for future architectural improvements
-
-        A ToDo does not necessarily mean unfinished work in the current implementation phase.
-
-  - type: dropdown
-    id: task_type
-    attributes:
-      label: Task Type
-      description: Select the ODTS Task Type
-      options:
-        - Work
-        - ToDo
-    validations:
-      required: true
-
-  - type: input
-    id: parent_item
-    attributes:
-      label: Parent Item
-      description: Enter the Parent Item reference
-      placeholder: "Item #..."
-    validations:
-      required: true
-
-  - type: input
-    id: related_items
-    attributes:
-      label: Related Items
-      description: Optional related Item references
-      placeholder: "Item #..., Item #..."
-
-  - type: input
-    id: related_tasks
-    attributes:
-      label: Related Tasks
-      description: Optional related Task references
-      placeholder: "Task #..., Task #..."
-
-  - type: input
-    id: workflow_reviewer
-    attributes:
-      label: Workflow Reviewer
-      description: Reviewer responsible for the current workflow stage
-      placeholder: "@..."
-
-  - type: input
-    id: domain
-    attributes:
-      label: Domain
-      description: Optional Task Domain if different from the Parent Item
-      placeholder: "..."
-
-  - type: textarea
-    id: summary
-    attributes:
-      label: Summary
-      description: Short summary of the Task
-      placeholder: Describe the Task briefly
-    validations:
-      required: true
-
-  - type: textarea
-    id: purpose
-    attributes:
-      label: Purpose
-      description: Explain why this Task exists
-      placeholder: Describe the purpose of this Task
-    validations:
-      required: true
+        Set **ODTS Task Subtype** using GitHub's native issue fields. Set optional team planning fields when your team uses them. Attach the new Task to exactly one Parent Item.
 
   - type: textarea
     id: work
     attributes:
       label: Work
-      description: Describe the concrete work steps
-      placeholder: |
-        1. Step one
-        2. Step two
-        3. Step three
+      description: What concrete work will be performed?
     validations:
       required: true
 
   - type: textarea
-    id: expected_result
+    id: done
     attributes:
-      label: Expected Result
-      description: Describe the expected outcome
-      placeholder: Describe the expected result
+      label: Done when
+      description: What observable result completes this Task?
     validations:
       required: true
 
   - type: textarea
-    id: notes
+    id: validation
     attributes:
-      label: Notes
-      description: Optional additional notes
-      placeholder: Additional notes
-      
+      label: Documentation and validation plan
+      description: Which code documentation and tests will be created before implementation? If a test is not possible, explain why and name the alternative validation.
+    validations:
+      required: true

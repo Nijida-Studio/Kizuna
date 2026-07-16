@@ -2,17 +2,18 @@ import ArgumentParser
 import KizunaCore
 
 @main
-struct KizunaCLI: ParsableCommand {
+struct KizunaCLI: AsyncParsableCommand {
 
     static let configuration = CommandConfiguration(
         commandName: "kizuna",
         abstract: "Kizuna command line interface",
         subcommands: [
+            LoadCommand.self,
             ListCommand.self
         ]
     )
 
-    mutating func run() throws {
+    mutating func run() async throws {
 
         let environment = try AppEnvironment.default()
 

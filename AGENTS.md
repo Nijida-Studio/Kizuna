@@ -12,6 +12,11 @@ The project is currently developed through small CLI mocks before the main devel
 
 Reuse the existing structure unless explicitly requested otherwise.
 
+During the mock phase, keep Kizuna usable as an independent Swift Package. For
+the later main development phase, plan for an Xcode workspace that brings
+Kizuna and Dokoni Foundation together without moving Kizuna-specific workflows
+into Foundation.
+
 Current structure:
 
 - Sources/Apps/CLI/
@@ -47,32 +52,27 @@ Repository selection is part of Mock 3.
 
 Keep GitHub API access isolated from CLI parsing.
 
-## Local private notes
+Mock 3 combines the authenticated GitHub reading proven by Mock 1 with the
+models, filtering, and output architecture proven by Mock 2. `load` refreshes
+a regenerable cache from a selected repository; `list` shows all loaded issues
+or filters them by `epic`, `item`, or `task`.
 
-Some developers may keep private notes outside the repository, for example in iCloud Drive.
+Mock 3 may explore GitHub access locally, but its findings should inform the
+future shared GitHub capability in Dokoni Foundation. Creating the final
+workspace or production Foundation integration is not part of Mock 3.
 
-These notes are optional and intentionally not version controlled.
+Mock 6 is reserved for the final Foundation and Xcode workspace integration.
+It should review the code from the preceding mocks for deliberate reuse,
+refactoring, relocation, or retirement. Its accepted result becomes the
+baseline for main development.
 
-## AMTS
-
-This project uses AMTS 0.1.0.
-
-AMTS location on the local developer machine:
-
-~/Library/Mobile Documents/com~apple~CloudDocs/AI/AMTS
-
-Project AMTS workspace:
-
-~/Library/Mobile Documents/com~apple~CloudDocs/AI/Projects/Kizuna
-
-When available, Akari should read:
-
-- AMTS/startup.md
-- AMTS/assistant-workflow.md
-- AMTS/directory-layout.md
-- Projects/Kizuna/handover.md
-- Projects/Kizuna/current-work.md
-- Projects/Kizuna/decisions.md
+## Local references
 
 Repository documentation remains the public source of truth.
-AMTS files provide private/local project memory.
+
+When a current AMTS Space is available, consult its Kizuna project for
+complementary working knowledge. Installation-specific paths, private notes,
+local conversations, and other resources that exist only on one machine belong
+in the project's `localreferences.md` file inside that Space.
+
+Do not record personal filesystem or iCloud paths in this repository.

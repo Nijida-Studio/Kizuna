@@ -8,3 +8,4 @@ This directory contains public project documentation.
 - project-memory.md: public project memory and current state
 - roadmap.md: planned mock sequence and later development phases
 - mock3-plan.md: current Mock 3 plan
+- mock6-plan.md: integration plan and transition into main development

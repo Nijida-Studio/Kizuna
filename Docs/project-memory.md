@@ -45,3 +45,35 @@ The existing structure should be reused.
 Mock 3 should test changing and writing GitHub issues.
 
 Repository selection is part of Mock 3.
+
+Mock 3 combines the GitHub issue reading proven by Mock 1 with the models,
+filtering, storage boundaries, and table output established by Mock 2.
+
+The CLI uses:
+
+- `load OWNER/REPOSITORY` to download issues and refresh a regenerable cache;
+- `list` to show every loaded issue; and
+- `list epic`, `list item`, or `list task` to filter the same data set.
+
+Manually maintained mock files outside the repository are no longer required.
+The existing JSON loader remains available for isolated tests and compatibility.
+
+## Future development structure
+
+Kizuna remains an independent Swift Package throughout the mock phase.
+
+The later main development phase should use an Xcode workspace containing
+Kizuna and Dokoni Foundation. Shared provider-level GitHub capabilities belong
+in Dokoni Foundation once their contracts have been derived from concrete
+consumer requirements. Kizuna retains ownership of its synchronization and
+product workflows.
+
+## Planned Final Mock
+
+Mock 6 is the final integration and structural validation mock. It creates the
+Xcode workspace for Kizuna and Dokoni Foundation, reviews the code produced by
+the earlier mocks, and reuses, refactors, relocates, or retires that code where
+the established ownership boundaries make it appropriate.
+
+The accepted Mock 6 result becomes the baseline for main development. There
+should be no second structural restart after Mock 6.

@@ -87,4 +87,6 @@ Damit steht die Basisarchitektur für die weitere Entwicklung.
 
 ## Nächster Mock
 
-Mock 3 ersetzt die lokale JSON-Datei durch einen ersten GitHub-Zugriff. Ziel ist es, reale Issues aus einem Repository abzurufen und dieselbe Filter- und Ausgabelogik weiterzuverwenden.
+Mock 3 führt den in Mock 1 getesteten GitHub-Zugriff mit der Architektur aus
+Mock 2 zusammen. Reale Issues werden aus einem auswählbaren Repository geladen
+und anschließend mit derselben Filter- und Ausgabelogik verarbeitet.
